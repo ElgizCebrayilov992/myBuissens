@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_statefull.dart';
-import 'package:my_business/src/compenent/submit_button_widget.dart';
-import 'package:my_business/src/sign_up.dart';
 
+import '../core/base/base_statefull.dart';
+import 'compenent/submit_button_widget.dart';
 import 'compenent/title_wdiget.dart';
 import 'login_page.dart';
+import 'sign_up.dart';
 
 class WelcomePage extends StatefulWidget {
   
@@ -36,35 +36,35 @@ class _WelcomePageState extends BaseStatefull<WelcomePage> {
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [myColor.gradientColorFirst, myColor.gradientColorSecond])),
+                    colors: [myColor.yellowOrange, myColor.christine])),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                TitleWdiget(textColor: myColor.welcomeSignUpTextColor,),
+                TitleWdiget(textColor: myColor.yellowOrange,),
                 SizedBox(
                   height: 80,
                 ),
                 CustomerMyButtonWidget(title: applicationStrings.loginButton, 
-                colorFirst: myColor.welcomeSignUpTextColor,
-                 colorSecond: myColor.welcomeSignUpTextColor, 
+                colorFirst: myColor.buttonColor1,
+                 colorSecond: myColor.buttonColor2, 
                  callBack: () {
                       Navigator.push(
             context, MaterialPageRoute(builder: (context) => LoginPage(),),);
                  }, 
-                 textColor: myColor.welcomeLoginTextColor),
+                 textColor: myColor.whiteColor),
                   SizedBox(
                   height: 20,
                 ),
                  //
                   CustomerMyButtonWidget(title: applicationStrings.registerButton, 
-                colorFirst: myColor.gradientColorFirst,
-                 colorSecond: myColor.welcomeLoginTextColor, 
+               colorFirst: myColor.buttonColor1,
+                 colorSecond: myColor.buttonColor2, 
                  callBack: () {
                     Navigator.push(
             context, MaterialPageRoute(builder: (context) => SignUpPage(),),);
                  }, 
-                 textColor: myColor.welcomeSignUpTextColor),
+                 textColor: myColor.whiteColor),
              
                 SizedBox(
                   height: 20,

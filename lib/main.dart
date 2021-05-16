@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
          primarySwatch: Colors.blue,
-         textTheme:GoogleFonts.latoTextTheme(textTheme).copyWith(
-           bodyText1: GoogleFonts.montserrat(textStyle: textTheme.bodyText1),
+         textTheme:GoogleFonts.pangolinTextTheme(textTheme).copyWith(bodyText1: GoogleFonts.montserrat(textStyle: textTheme.bodyText1),
          ),
       ),
       debugShowCheckedModeBanner: false,
@@ -25,3 +24,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+/*
+GoogleFonts.latoTextTheme(textTheme).copyWith(
+           bodyText1: GoogleFonts.montserrat(textStyle: textTheme.bodyText1)
+
+ */

@@ -12,10 +12,21 @@ class ApplicationStrings {
   final String registerNow = 'Qeydiyyatdan keç';
   final String forgotPassword = 'Şifrəni unutmusunuz ?';
   final String dontHave = 'Hesabınız yoxdur ?';
-  final String mail = 'Mail';
+  final String mail = 'Email';
   final String password = 'Şifrə';
   final String already = 'Artıq bir hesabınız var mı ?';
   final String companyName = 'Şirkət adı';
+  
   final String name = 'Adınız';
+  
   final String phone = 'Telefon nömrəniz';
+   final String search = 'Yoxla';
+  //enum
+   final String facebook = 'Facebook';
+   final String call = 'Zəng';
+   final String whatsapp = 'Whatsapp';
+   final String telegram = 'Telegram';
+  final String email = 'Email';
+  final String contactMail = 'Əlaqə vasitəsini yazın';
+
 }

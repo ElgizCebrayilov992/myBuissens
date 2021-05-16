@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_statefull.dart';
-import 'package:my_business/src/compenent/accountLabel.dart';
-import 'package:my_business/src/compenent/submit_button_widget.dart';
+import '../core/base/base_statefull.dart';
+import 'compenent/accountLabel.dart';
+import 'compenent/submit_button_widget.dart';
 
 import 'compenent/bezier_container.dart';
 import 'compenent/custom_text_form_field.dart';
@@ -54,20 +54,20 @@ class _SignUpPageState extends BaseStatefull<SignUpPage> {
                 children: <Widget>[
                   SizedBox(height: height * .2),
                   TitleWdiget(
-                    textColor: myColor.gradientColorSecond,
+                    textColor: myColor.christine,
                   ),
                   buildForm(),
                   CustomerMyButtonWidget(
                         title: applicationStrings.registerNow,
-                        colorFirst: myColor.gradientColorFirst,
-                        colorSecond: myColor.gradientColorSecond,
+                        colorFirst: myColor.yellowOrange,
+                        colorSecond: myColor.christine,
                         callBack: () {},
-                        textColor: myColor.welcomeSignUpTextColor),
+                        textColor: myColor.whiteColor),
                   AccountLabel(
                       page: LoginPage(),
                       textLabel: applicationStrings.already,
                       textButtonLabel: applicationStrings.loginButton,
-                      textButtonLabelColor: myColor.gradientColorFirst),
+                      textButtonLabelColor: myColor.yellowOrange),
                 ],
               ),
             ),
@@ -129,7 +129,7 @@ class _SignUpPageState extends BaseStatefull<SignUpPage> {
                         controller: controllerPassword,
                         isPassword: _isPassword,
                         icon: IconButton(
-                          color: myColor.gradientColorSecond,
+                          color: myColor.christine,
                           icon: Icon(_isPassword
                               ? Icons.visibility
                               : Icons.visibility_off),

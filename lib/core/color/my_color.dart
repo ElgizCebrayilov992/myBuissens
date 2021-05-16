@@ -10,11 +10,12 @@ class MyColor {
   MyColor._init();
 
   //welcome color
- final Color welcomeBoxShodowColor=Color(0xffdf8e33);
- final Color welcomeLoginTextColor=Color(0xfff7892b);
- final Color welcomeSignUpTextColor=Colors.white;
- final Color gradientColorFirst=Color(0xfffbb448);
- final Color gradientColorSecond=Color(0xffe46b10);
+ 
+ final Color whiteColor=Colors.white;
+ final Color yellowOrange=Color(0xfffbb448);
+ final Color christine=Color(0xffe46b10);
+ final Color buttonColor1=Color(0xffDABA2B);
+ final Color buttonColor2=Color(0xffC29942);
  
  
 

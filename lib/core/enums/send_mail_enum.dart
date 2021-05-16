@@ -1,0 +1,7 @@
+enum SingingCharacter{
+FACEBOOK,
+EMAIL,
+CALL,
+WHATSAPP,
+TELEGRAM,
+}

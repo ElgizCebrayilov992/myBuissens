@@ -11,8 +11,8 @@ class TitleWdiget extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(
           text: 'My ',
-          style: GoogleFonts.portLligatSans(
-            textStyle: Theme.of(context).textTheme.headline4,
+          style: GoogleFonts.lobster(
+            textStyle: Theme.of(context).textTheme.bodyText1,
             fontSize: 30,
             fontWeight: FontWeight.w700,
             color: Color(0xffe46b10),

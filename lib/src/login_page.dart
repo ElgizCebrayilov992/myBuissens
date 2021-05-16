@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-import 'package:my_business/core/base/base_statefull.dart';
-import 'package:my_business/src/compenent/accountLabel.dart';
-import 'package:my_business/src/compenent/custom_text_form_field.dart';
-import 'package:my_business/src/compenent/submit_button_widget.dart';
-import 'package:my_business/src/compenent/title_wdiget.dart';
-import 'package:my_business/src/forget_page.dart';
-import 'package:my_business/src/sign_up.dart';
 
+import '../core/base/base_statefull.dart';
+import 'compenent/accountLabel.dart';
 import 'compenent/bezier_container.dart';
+import 'compenent/custom_text_form_field.dart';
+import 'compenent/submit_button_widget.dart';
+import 'compenent/title_wdiget.dart';
+import 'forget_page.dart';
+import 'sign_up.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -33,14 +33,14 @@ class _LoginPageState extends BaseStatefull<LoginPage> {
   Stack buildStack(double height, BuildContext context) {
     return Stack(
       children: <Widget>[
-        buildPositioned(height, context),
+        buildPositionedImage(height, context),
         buildContainer(height),
-        buildPositionedBack(),
+        buildPositionedBackButton(),
       ],
     );
   }
 
-  Positioned buildPositionedBack() =>
+  Positioned buildPositionedBackButton() =>
       Positioned(top: 40, left: 0, child: BackButton());
 
   Container buildContainer(double height) {
@@ -53,7 +53,7 @@ class _LoginPageState extends BaseStatefull<LoginPage> {
           children: <Widget>[
             SizedBox(height: height * .2),
             TitleWdiget(
-              textColor: myColor.gradientColorSecond,
+              textColor: myColor.yellowOrange,
             ),
             SizedBox(height: 50),
             Form(
@@ -78,8 +78,8 @@ class _LoginPageState extends BaseStatefull<LoginPage> {
             SizedBox(height: 20),
             CustomerMyButtonWidget(
               title: applicationStrings.loginButton,
-              colorFirst: myColor.gradientColorFirst,
-              colorSecond: myColor.welcomeLoginTextColor,
+              colorFirst: myColor.yellowOrange,
+              colorSecond: myColor.christine,
               callBack: () {
                 Logger().wtf("message");
               },
@@ -106,7 +106,7 @@ class _LoginPageState extends BaseStatefull<LoginPage> {
     );
   }
 
-  Positioned buildPositioned(double height, BuildContext context) {
+  Positioned buildPositionedImage(double height, BuildContext context) {
     return Positioned(
         top: -height * .15,
         right: -MediaQuery.of(context).size.width * .4,
