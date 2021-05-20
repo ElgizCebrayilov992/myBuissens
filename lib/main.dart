@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
-import 'src/welcome_page.dart';
+import 'core/controllers/menu_controller.dart';
+import 'src/main_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,17 +17,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-         primarySwatch: Colors.blue,
-         textTheme:GoogleFonts.pangolinTextTheme(textTheme).copyWith(bodyText1: GoogleFonts.montserrat(textStyle: textTheme.bodyText1),
-         ),
+        primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.pangolinTextTheme(textTheme).copyWith(
+          bodyText1: GoogleFonts.montserrat(textStyle: textTheme.bodyText1),
+        ),
       ),
       debugShowCheckedModeBanner: false,
-      home: WelcomePage(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => MenuController(),
+          ),
+        ],
+        child: MainScreen(),
+      ),
     );
   }
 }
-/*
-GoogleFonts.latoTextTheme(textTheme).copyWith(
-           bodyText1: GoogleFonts.montserrat(textStyle: textTheme.bodyText1)
-
- */

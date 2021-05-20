@@ -28,7 +28,8 @@ class CustomerMyButtonWidget extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                colors: [colorFirst, colorSecond])),
+                colors: [colorFirst, colorSecond]),
+                ),
         child: Text(
           title,
           style: TextStyle(fontSize: 20, color: textColor),

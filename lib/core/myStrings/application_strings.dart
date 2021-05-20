@@ -29,4 +29,9 @@ class ApplicationStrings {
   final String email = 'Email';
   final String contactMail = 'Əlaqə vasitəsini yazın';
 
+  //Dashboard
+  //'Ana Səhifə'
+final String dashBoardMenu = 'Ana Səhifə';
+//"My Files"
+final String myFiles = 'Ümumi məlumat';
 }
