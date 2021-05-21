@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class MyColor {
   static MyColor? _instace;
   static MyColor get instance{
@@ -16,6 +15,9 @@ class MyColor {
  final Color christine=Color(0xffe46b10);
  final Color buttonColor1=Color(0xffDABA2B);
  final Color buttonColor2=Color(0xffC29942);
+  final Color oneDayColor=Color(0xff3F2A32);
+  final Color monthDayColor=Color(0xff8C787E);
+  final Color allDayColor=Color(0xff064420);
  
  
 

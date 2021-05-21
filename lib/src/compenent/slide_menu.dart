@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:my_business/core/base/base_stateless.dart';
 import 'package:my_business/core/color/my_color.dart';
 import 'package:my_business/src/compenent/title_wdiget.dart';
 
 import 'menu_list_tile.dart';
 
-class SlideMenu extends StatelessWidget {
-  const SlideMenu({
-    Key? key,
-  }) : super(key: key);
+// ignore: must_be_immutable
+class SlideMenu extends BaseStateless {
+  
 
   @override
   Widget build(BuildContext context) {
@@ -24,57 +24,57 @@ class SlideMenu extends StatelessWidget {
             ),
             Divider(),
             MenuListTile(
-              title: 'Home',
+              title: applicationStrings.home,
               svgPath: "home",
               callBack: () {},
             ), //cashier_machine
             MenuListTile(
-              title: 'Satış',
+              title: applicationStrings.sale,
               svgPath: "cashier_machine",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Müştəri',
+              title: applicationStrings.customer,
               svgPath: "customer",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Şirkət',
+              title: applicationStrings.company,
               svgPath: "company",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Depo',
+              title: applicationStrings.depo,
               svgPath: "depo",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Ölçü vahidi',
+              title: applicationStrings.measure,
               svgPath: "measure",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'alış-satış vahidi',
+              title: applicationStrings.convert,
               svgPath: "convert",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Sənəd tipi',
+              title: applicationStrings.documentType,
               svgPath: "contract",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Məhsul',
+              title: applicationStrings.product,
               svgPath: "product",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Parametrlər',
+              title: applicationStrings.settings,
               svgPath: "settings",
               callBack: () {},
             ),
             MenuListTile(
-              title: 'Haqqımızda',
+              title: applicationStrings.about,
               svgPath: "information",
               callBack: () {},
             ),

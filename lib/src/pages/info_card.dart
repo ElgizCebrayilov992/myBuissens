@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_business/core/base/base_stateless.dart';
 
-import 'package:my_business/core/color/my_color.dart';
 
+// ignore: must_be_immutable
 class StorageInfoCard extends StatelessWidget {
-  const StorageInfoCard({
+   StorageInfoCard({
     Key? key,
     required this.amountOfFiles,
     required this.numOfFiles,
     required this.title,
     required this.svgSrc,
+    required this.color
   }) : super(key: key);
 
   final String title, svgSrc, amountOfFiles;
   final int numOfFiles;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +24,9 @@ class StorageInfoCard extends StatelessWidget {
       margin: EdgeInsets.only(top: 16),
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
+        color: color,
         border: Border.all(
-            width: 2, color: MyColor.instance.christine.withOpacity(0.15)),
+            width: 2, color: Colors.white38),
         borderRadius: const BorderRadius.all(
           Radius.circular(16),
         ),
@@ -33,8 +37,8 @@ class StorageInfoCard extends StatelessWidget {
             height: 20,
             width: 20,
             child: SvgPicture.asset(
-              svgSrc,
-              color: Colors.red,
+              "assets/images/svg/$svgSrc.svg",
+              color: Colors.white,
             ),
           ),
           Expanded(
@@ -44,12 +48,18 @@ class StorageInfoCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
+                     title,
+                     style: Theme.of(context)
+                        .textTheme
+                        .caption!
+                        .copyWith(color: Colors.white70),
+                   
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
+                    
                   ),
                   Text(
-                    "$numOfFiles Files",
+                    "$numOfFiles Məhsul",
                     style: Theme.of(context)
                         .textTheme
                         .caption!
@@ -59,7 +69,10 @@ class StorageInfoCard extends StatelessWidget {
               ),
             ),
           ),
-          Text(amountOfFiles)
+          Text(amountOfFiles, style: Theme.of(context)
+                        .textTheme
+                        .caption!
+                        .copyWith(color: Colors.white70),)
         ],
       ),
     );

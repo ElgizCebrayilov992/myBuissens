@@ -1,8 +1,10 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:my_business/core/base/base_stateless.dart';
 import 'package:my_business/core/color/my_color.dart';
 
-class Chart extends StatelessWidget {
+// ignore: must_be_immutable
+class Chart extends BaseStateless {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -42,33 +44,30 @@ class Chart extends StatelessWidget {
 
 List<PieChartSectionData> paiChartSelectionDatas = [
   PieChartSectionData(
-    color: MyColor.instance.yellowOrange,
-    value: 25,
+    color: MyColor.instance.oneDayColor,
+    value: 10,
     showTitle: false,
     radius: 25,
   ),
-  PieChartSectionData(
-    color: Color(0xFF26E5FF),
-    value: 20,
-    showTitle: false,
-    radius: 22,
-  ),
-  PieChartSectionData(
-    color: Color(0xFFFFCF26),
-    value: 10,
-    showTitle: false,
-    radius: 19,
-  ),
-  PieChartSectionData(
-    color: Color(0xFFEE2727),
+   PieChartSectionData(
+    color: MyColor.instance.monthDayColor,
     value: 15,
     showTitle: false,
-    radius: 16,
+    radius: 25,
   ),
+   PieChartSectionData(
+    color: MyColor.instance.allDayColor,
+    value: 60,
+    showTitle: false,
+    radius: 25,
+  ),
+  
+/*
   PieChartSectionData(
     color: MyColor.instance.yellowOrange.withOpacity(0.1),
-    value: 25,
+    value: 15,
     showTitle: false,
     radius: 13,
   ),
+  */
 ];

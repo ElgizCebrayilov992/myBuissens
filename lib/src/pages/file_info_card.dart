@@ -5,6 +5,7 @@ import 'package:my_business/core/base/base_stateless.dart';
 import 'package:my_business/core/color/my_color.dart';
 import 'package:my_business/src/compenent/dashboard_info_title.dart';
 
+// ignore: must_be_immutable
 class FileInfoCard extends BaseStateless {
   final String svgPath;
   final String title;
@@ -41,10 +42,11 @@ class FileInfoCard extends BaseStateless {
                 colors: [myColor.christine, myColor.yellowOrange]),
                 ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          buildColumnTextInfoSvg(),
+            buildColumnTextInfoSvg(context),
+            Divider(),
             DashboardInfoTitle(info: totalCustomerInfo,subTitle: totalCustomer,),
             DashboardInfoTitle(info: debitCustomerInfo,subTitle: debitCustomer,),
         ],
@@ -52,34 +54,37 @@ class FileInfoCard extends BaseStateless {
     );
   }
 
-  Column buildColumnTextInfoSvg() {
+  Widget buildColumnTextInfoSvg(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.max,
+       crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
           children: [
             buildRowSvg(),
-            buildTextTitle(),
+            buildTextTitle(context),
           ],
         );
   }
 
 
 
-  Text buildTextTitle() {
+  Text buildTextTitle(BuildContext context) {
     return Text(
           title,
           maxLines: 1,
-          overflow: TextOverflow.ellipsis,
+          overflow: TextOverflow.ellipsis,style: Theme.of(context).textTheme.headline5,
         );
   }
 
   Widget buildRowSvg() {
     return Container(
-              padding: EdgeInsets.all(16 * 0.75),
+            //  padding: EdgeInsets.all(16 * 0.75),
               height: 40,
               width: 40,
               decoration: buildBoxDecoration(),
               child: SvgPicture.asset(
                 'assets/images/svg/$svgPath.svg',
-                color: MyColor.instance.whiteColor,
+                color: MyColor.instance.whiteColor,fit: BoxFit.contain,
               ),
             );
   }

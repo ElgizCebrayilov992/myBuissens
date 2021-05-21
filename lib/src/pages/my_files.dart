@@ -24,9 +24,9 @@ class MyFiels extends BaseStateless {
         Responsive(
           mobile: FileInfoCardGridView(
             crossAxisCount: _size.width < 650 ? 2 : 4,
-            childAspectRatio: _size.width < 650 ? 1.3 : 1,
+            childAspectRatio: _size.width <= 320 ? 0.9 : 1,
           ),
-          tablet: FileInfoCardGridView(),
+          tablet: FileInfoCardGridView(  ),
           desktop: FileInfoCardGridView(
             childAspectRatio: _size.width < 1400 ? 1.1 : 1.4,
           ),
@@ -36,8 +36,9 @@ class MyFiels extends BaseStateless {
   }
 }
 
-class FileInfoCardGridView extends StatelessWidget {
-  const FileInfoCardGridView({
+// ignore: must_be_immutable
+class FileInfoCardGridView extends BaseStateless {
+   FileInfoCardGridView({
     Key? key,
     this.crossAxisCount = 4,
     this.childAspectRatio = 1,
@@ -60,22 +61,27 @@ class FileInfoCardGridView extends StatelessWidget {
       ),
       children: [ 
         //mehsullar
-        FileInfoCard(svgPath: 'customer',
-        title: 'Müştərilər',
-        totalCustomer: 'Müştəri sayı',
+          FileInfoCard(svgPath: 'product',
+        title: applicationStrings.product,
+        totalCustomer: applicationStrings.totalCustomerProduct,
         totalCustomerInfo: '65',
-        debitCustomer: "Borclu müştəri sayı",
-        debitCustomerInfo: '45',),
+        debitCustomer: "Ümümi məhsul sayı",
+        debitCustomerInfo: '43333434345',),
 
         //sirketler
-        FileInfoCard(svgPath: 'product',
-        title: 'Məhsullar',
-        totalCustomer: 'Anbarda məhsul sayı',
+        FileInfoCard(svgPath: 'company',
+        title: applicationStrings.company,
+        totalCustomer: applicationStrings.totalCustomerCompany,
         totalCustomerInfo: '65',
         debitCustomer: "Ümümi məhsul sayı",
         debitCustomerInfo: '43333434345',),
          //Musteri
-        
+         FileInfoCard(svgPath: 'customer',
+        title: applicationStrings.customer,
+        totalCustomer: applicationStrings.totalCustomerCustomer,
+        totalCustomerInfo: '65',
+        debitCustomer: "Borclu müştəri sayı",
+        debitCustomerInfo: '45',),
           //
 
         ],

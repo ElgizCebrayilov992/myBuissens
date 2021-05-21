@@ -1,3 +1,6 @@
+
+
+
 class ApplicationStrings {
   static ApplicationStrings? _instace;
   static ApplicationStrings get instance {
@@ -34,4 +37,33 @@ class ApplicationStrings {
 final String dashBoardMenu = 'Ana Səhifə';
 //"My Files"
 final String myFiles = 'Ümumi məlumat';
+
+//menu strings
+final String home = 'Ana Səhifə';
+final String sale = 'Satış';
+final String customer = 'Müştərilər';
+final String company = 'Şirkətlər';
+final String depo = 'Depolar';
+final String measure = 'Ölçü vahidləri';
+final String convert = 'Alış-satış vahidləri';
+final String documentType = 'Sənəd tipləri';
+final String product = 'Məhsullar';
+final String settings = 'Parametrler';
+final String about = 'Haqqımızda';
+
+final String totalCustomerProduct = 'Anbarda məhsul sayı';
+
+final String totalCustomerCustomer = 'Ümumi müştəri sayı';
+final String totalCustomerCompany = 'Ümumi şirkətlər sayı';
+final String recentFileTitle = 'Satış tarixcəsi';
+final String recentTableNo = 'No:';
+final String recentTableProductName = 'Məhsul adı';
+final String recentTablePrice = 'Qiymət';
+final String recentTableWhom = 'Kimə';
+final String recentTableTime = 'Tarix';
+
+final String totalPrice = 'Ümumi satış';
+final String totalPriceDaySale = 'Günlük satış';
+final String totalPriceMonthSale = 'Aylıq satış';
+
 }
