@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:my_business/core/base/base_stateless.dart';
-import 'package:my_business/core/color/my_color.dart';
-import 'package:my_business/src/compenent/dashboard_info_title.dart';
+import '../../core/base/base_stateless.dart';
+import '../../core/color/my_color.dart';
+import 'dashboard_info_title.dart';
 
 // ignore: must_be_immutable
 class FileInfoCard extends BaseStateless {

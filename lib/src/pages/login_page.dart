@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
-import 'package:my_business/core/base/base_statefull.dart';
-import 'package:my_business/src/compenent/accountLabel.dart';
-import 'package:my_business/src/compenent/bezier_container.dart';
-import 'package:my_business/src/compenent/custom_text_form_field.dart';
-import 'package:my_business/src/compenent/submit_button_widget.dart';
-import 'package:my_business/src/compenent/title_wdiget.dart';
 
+import '../../core/base/base_statefull.dart';
+import '../compenent/accountLabel.dart';
+import '../compenent/bezier_container.dart';
+import '../compenent/custom_text_form_field.dart';
+import '../compenent/submit_button_widget.dart';
+import '../compenent/title_wdiget.dart';
 import 'forget_page.dart';
 import 'sign_up.dart';
 

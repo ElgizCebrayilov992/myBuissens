@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:my_business/core/color/my_color.dart';
-import 'package:my_business/core/myStrings/application_strings.dart';
+import '../color/my_color.dart';
+import '../myStrings/application_strings.dart';
 
 
 // ignore: must_be_immutable

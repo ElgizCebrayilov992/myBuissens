@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_stateless.dart';
-import 'package:my_business/core/responsive/responsive.dart';
 
+import '../../core/base/base_stateless.dart';
+import '../../core/responsive/responsive.dart';
 import 'file_info_card.dart';
 
 // ignore: must_be_immutable

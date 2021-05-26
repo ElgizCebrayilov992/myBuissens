@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_statefull.dart';
-import 'package:my_business/src/compenent/submit_button_widget.dart';
-import 'package:my_business/src/compenent/title_wdiget.dart';
+import '../../core/base/base_statefull.dart';
+import '../compenent/submit_button_widget.dart';
+import '../compenent/title_wdiget.dart';
 
 import 'login_page.dart';
 import 'sign_up.dart';

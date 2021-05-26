@@ -1,7 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_stateless.dart';
-import 'package:my_business/core/color/my_color.dart';
+
+import '../../core/base/base_stateless.dart';
+import '../../core/color/my_color.dart';
 
 // ignore: must_be_immutable
 class Chart extends BaseStateless {

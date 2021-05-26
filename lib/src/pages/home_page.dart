@@ -2,8 +2,9 @@ import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_business/constants.dart';
-import 'package:my_business/core/base/base_statefull.dart';
+
+import '../../constants.dart';
+import '../../core/base/base_statefull.dart';
 
 class HomePage extends StatefulWidget {
   @override

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_stateless.dart';
-import 'package:my_business/core/controllers/menu_controller.dart';
-import 'package:my_business/core/responsive/responsive.dart';
-import 'package:my_business/src/pages/recent_file.dart';
-import 'package:my_business/src/pages/storge_detail.dart';
 import 'package:provider/provider.dart';
 
-import 'my_files.dart';
+import '../../core/base/base_stateless.dart';
+import '../../core/controllers/menu_controller.dart';
+import '../../core/responsive/responsive.dart';
+import '../compenent/my_files.dart';
+import 'recent_file.dart';
+import 'storge_detail.dart';
 
 // ignore: must_be_immutable
 class DashboardScreen extends BaseStateless {

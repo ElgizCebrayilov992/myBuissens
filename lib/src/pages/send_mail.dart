@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_statefull.dart';
-import 'package:my_business/core/enums/send_mail_enum.dart';
-import 'package:my_business/src/compenent/bezier_container.dart';
-import 'package:my_business/src/compenent/custom_text_form_field.dart';
-import 'package:my_business/src/compenent/submit_button_widget.dart';
-import 'package:my_business/src/compenent/title_wdiget.dart';
+import '../../core/base/base_statefull.dart';
+import '../../core/enums/send_mail_enum.dart';
+import '../compenent/bezier_container.dart';
+import '../compenent/custom_text_form_field.dart';
+import '../compenent/submit_button_widget.dart';
+import '../compenent/title_wdiget.dart';
 
 class SendMail extends StatefulWidget {
   @override

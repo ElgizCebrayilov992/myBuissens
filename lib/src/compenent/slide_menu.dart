@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_stateless.dart';
-import 'package:my_business/core/color/my_color.dart';
-import 'package:my_business/src/compenent/title_wdiget.dart';
+import '../../core/base/base_stateless.dart';
+import '../../core/color/my_color.dart';
+import 'title_wdiget.dart';
+import '../pages/sale_page.dart';
 
 import 'menu_list_tile.dart';
 
@@ -23,15 +24,23 @@ class SlideMenu extends BaseStateless {
               ),
             ),
             Divider(),
+            /*
             MenuListTile(
               title: applicationStrings.home,
               svgPath: "home",
-              callBack: () {},
-            ), //cashier_machine
+              callBack: () {
+                _selectMenu(menu: MainScreen(), context: context);
+              },
+            ), 
+            */
+            //cashier_machine
             MenuListTile(
               title: applicationStrings.sale,
               svgPath: "cashier_machine",
-              callBack: () {},
+              callBack: () {
+                
+                   _selectMenu(menu: SalePage(), context: context);
+              },
             ),
             MenuListTile(
               title: applicationStrings.customer,
@@ -82,5 +91,10 @@ class SlideMenu extends BaseStateless {
         ),
       ),
     );
+  }
+  void _selectMenu({required Widget menu,required BuildContext context}){
+   // Navigator.pop(context);
+    Navigator.push(context, MaterialPageRoute(builder: (context) => menu,));
+
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_business/core/color/my_color.dart';
+import '../../core/color/my_color.dart';
 
 class MenuListTile extends StatelessWidget {
   final String title;

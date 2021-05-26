@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_business/core/base/base_stateless.dart';
+import '../../core/base/base_stateless.dart';
 
 // ignore: must_be_immutable
 class RecentFiles extends BaseStateless {
