@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_business/src/pages/company_page.dart';
+import 'package:my_business/src/pages/convert_page.dart';
+import 'package:my_business/src/pages/customer_page.dart';
+import 'package:my_business/src/pages/depo_page.dart';
+import 'package:my_business/src/pages/measure_page.dart';
 import '../../core/base/base_stateless.dart';
 import '../../core/color/my_color.dart';
 import 'title_wdiget.dart';
@@ -8,8 +13,6 @@ import 'menu_list_tile.dart';
 
 // ignore: must_be_immutable
 class SlideMenu extends BaseStateless {
-  
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -38,34 +41,43 @@ class SlideMenu extends BaseStateless {
               title: applicationStrings.sale,
               svgPath: "cashier_machine",
               callBack: () {
-                
-                   _selectMenu(menu: SalePage(), context: context);
+                _selectMenu(menu: SalePage(), context: context);
               },
             ),
             MenuListTile(
               title: applicationStrings.customer,
               svgPath: "customer",
-              callBack: () {},
+              callBack: () {
+                 _selectMenu(menu: CustomerPage(), context: context);
+              },
             ),
             MenuListTile(
               title: applicationStrings.company,
               svgPath: "company",
-              callBack: () {},
+              callBack: () {
+                 _selectMenu(menu: CompanyPage(), context: context);
+              },
             ),
             MenuListTile(
               title: applicationStrings.depo,
               svgPath: "depo",
-              callBack: () {},
+              callBack: () {
+                 _selectMenu(menu: DepoPage(), context: context);
+              },
             ),
             MenuListTile(
               title: applicationStrings.measure,
               svgPath: "measure",
-              callBack: () {},
+              callBack: () {
+                   _selectMenu(menu: MeasurePage(), context: context);
+              },
             ),
             MenuListTile(
               title: applicationStrings.convert,
               svgPath: "convert",
-              callBack: () {},
+              callBack: () {
+                    _selectMenu(menu: ConvertPage(), context: context);
+              },
             ),
             MenuListTile(
               title: applicationStrings.documentType,
@@ -92,9 +104,13 @@ class SlideMenu extends BaseStateless {
       ),
     );
   }
-  void _selectMenu({required Widget menu,required BuildContext context}){
-   // Navigator.pop(context);
-    Navigator.push(context, MaterialPageRoute(builder: (context) => menu,));
 
+  void _selectMenu({required Widget menu, required BuildContext context}) {
+    // Navigator.pop(context);
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => menu,
+        ));
   }
 }
